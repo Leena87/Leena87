@@ -1,0 +1,107 @@
+XPath Functions in Selenium
+--------------------------
+There may be times that while locating a particular web element using general attributes, there are elements that have similar properties, like the same name or the same class name. This is when the simple XPath strategies are not efficient and the need for XPath Functions arises.
+
+XPath in Selenium provides XPath functions to write efficient XPaths to discover elements uniquely. Let's have a look at all the different functions in Selenium:
+
+XPath Contains() function
+-------------------------
+The XPath Contains() is a function used to create an XPath expression. It is used if part of the value of any attribute changes dynamically, like login information, etc. The function can navigate to the web element with the partial text present.
+
+
+
+//tag_name[contains(@attribute,’value_of_attribute’)]
+
+The Contains() method accepts two parameters:
+
+The attribute of the tag must validate to locate the web element.
+The value of an attribute is a partial value that the attribute must contain.
+XPath Text() function
+The XPath Text() is a function used to locate the element on a web page using the web element's text. The function proves its worth if the element contains a text, like a label, etc.
+
+//tag_name[text()= ’Text of the element’]
+
+The text() method here returns the text of the web element when identified by the tag_name, and compared with the value provided on the right side.
+
+XPath Starts-with() function
+The XPath Starts-with() function is used to find the element in which the attribute value starts with some specific character or a sequence of characters. The function plays a major role while working with the dynamic web pages. 
+
+/tag_name[starts-with(@attribute,’Part_of_Attribute_value’)]
+
+The Starts-with() accepts two parameters:
+
+The attribute of the tag must validate to locate the web element.
+The attribute value is the partial value of the attribute with which the attribute is expected to start
+
+54. What is the difference between single and double slash in Xpath?
+Single slash is used to create Xpath with an absolute path i.e. the XPath would be created to start selection from the start node.
+
+/html/body/div[2]/div[1]/div[1]/a
+
+Double slash is used to create Xpath with relative path i.e. the XPath would be created to start selection from anywhere within the document
+
+//div[class="qa-logo"]/a
+
+14. Explain the difference between getText() and getAttribute() in Selenium
+Answer:
+
+Candidates should be able to articulate how the getAttribute() method provides the value of a particular HTML attribute and the getText() method provides the visible text of a web element. 
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+15. What is the major difference between driver.close() and driver.quit()?
+driver.close()
+
+This command closes the browser’s current window. If multiple windows are open, the current window of focus will be closed.
+
+driver.quit()
+
+ When quit() is called on the driver instance and there are one or more browser windows open, it closes all the open browser windows.
+
+
+
+
+42. What is the difference between getwindowhandles() and getwindowhandle()?
+getwindowhandle() method returns the unique identifier of the current browser window, while getwindowhandles() method returns a set of unique identifiers of all the browser windows opened by WebDriver.
+
+switchTo() command is used to switch between windows, frames or pop-ups within the application. Every window instantiated by the WebDriver is given a unique alphanumeric value called “Window Handle”.
+
+Get the window handle of the window you wish to switch to
+
+   String  handle= driver.getWindowHandle();
+
+Switch to the desired window
+
+   driver.switchTo().window(handle);
+
+Alternatively
+
+  for(String handle= driver.getWindowHandles())
+
+   { driver.switchTo().window(handle); }
+
+
+Soft asserts help verify certain test conditions in the case even after the assert condition fails. Testers use this assert when passing one test condition is not necessary to complete subsequent tests. 
+
+Hard asserts abort test execution when the test doesn’t meet the asserted condition. Candidates should also mention that when there is an assertion error, it displays the java.lang.AssertionError exception.
+
+When the candidate mentions hard asserts, look for answers that list the different types of Hard Assertions in Selenium: 
+
+assertNull()
+
+assertNotNull()
+
+assertEquals()
+
+assertNotEquals()
+
+assertTrue()
+
+assertFalse()
+
+
