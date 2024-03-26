@@ -9,7 +9,7 @@ public class BaseTestclass extends Broswerfactoryclass {
 	@Test
 	void testcheck()
 	{
-System.out.print("hi");
+System.out.print("hi t");
 	
 
 }}
